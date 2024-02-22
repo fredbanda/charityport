@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import Button from './button'
 
 const Hero = () => {
   return (
@@ -35,10 +36,49 @@ const Hero = () => {
         </div>
         <p className="bold-16 lg:bold-20 text-blue-70">
           198k
-          <span className=" text-bold lg:regular-20 text-green-500 ml-1 ">Excellent Reviews</span>
+          <span className=" text-bold lg:regular-20 text-sky-900 ml-1 ">Excellent Reviews</span>
         </p>
       </div>
+
+      <div className="flex flex-col full gap-3 sm:flex-row">
+        <Button 
+            type='button'
+            title='Get Your Free Laptop'
+            variant='btn_green' 
+            icon={''}
+            />
+        <Button 
+            type='button'
+            title='How We Work'
+            variant='btn_white_text' 
+            icon={'/play.svg'}
+            />
+      </div>
     </div>
+    <div className="relative flex flex-1 items-start">
+      <div className="relative z-20 flex-col gap-8 rounded-3xl bg-green-90 px-7 py-8 w-[268px]">
+          <div className="flex flex-col">
+            <div className="flexBetween">
+              <p className='regular-16 text-gray-20'>Wherever you are</p>
+              <Image 
+              src={"/close.svg"}
+              alt='close'
+              width={24}
+              height={24}
+              className='cursor-pointer'
+              />
+            </div>
+            <p className='bold-20 text-white'>You matter Too</p>
+            </div>
+
+            <div className="flexBetween">
+            <div className="flex flex-col">
+              <p className="regular-16 block text-gray-20">No Political Affiliation</p>
+              <p className="bold-20 text-white">Everyone is EQUAL</p>
+            </div>
+            </div>
+          </div>
+      </div>
   </section>
   )
 }
